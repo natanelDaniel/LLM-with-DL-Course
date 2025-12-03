@@ -12,8 +12,8 @@ TEST_FILE_PATH = r"data\test.csv"
 EMBEDDING_TYPE = "glove" 
 
 # !!! IMPORTANT: Ensure these folders exist and files are present !!!
-GLOVE_PATH = r"emeddings\glove.6B.100d.txt" 
-WORD2VEC_PATH = r"emeddings\word2vec_vectors.txt"
+GLOVE_PATH = r"embeddings\glove.6B.100d.txt" 
+WORD2VEC_PATH = r"embeddings\word2vec_vectors.txt"
 
 # Configurations for the exhaustive comparison loop in main.py
 EMBEDDING_OPTIONS = ["our_embedding", "glove", "word2vec"]

@@ -1,0 +1,19 @@
+Experiment Name: GRU_glove_Frozen
+Embedding Type: glove
+Embeddings Frozen: True
+--------------------------------------------------
+Final Validation Accuracy: 0.8360
+Final Validation Loss: 0.4610
+--------------------------------------------------
+              precision    recall  f1-score   support
+
+     sadness     0.8924    0.9200    0.9060       550
+         joy     0.8398    0.8935    0.8658       704
+        love     0.6489    0.4775    0.5502       178
+       anger     0.8876    0.8618    0.8745       275
+        fear     0.7510    0.8538    0.7991       212
+    surprise     0.7556    0.4198    0.5397        81
+
+    accuracy                         0.8360      2000
+   macro avg     0.7959    0.7377    0.7559      2000
+weighted avg     0.8310    0.8360    0.8297      2000

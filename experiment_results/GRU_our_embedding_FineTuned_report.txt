@@ -1,0 +1,19 @@
+Experiment Name: GRU_our_embedding_FineTuned
+Embedding Type: our_embedding
+Embeddings Frozen: False
+--------------------------------------------------
+Final Validation Accuracy: 0.8970
+Final Validation Loss: 0.3498
+--------------------------------------------------
+              precision    recall  f1-score   support
+
+     sadness     0.8974    0.9545    0.9251       550
+         joy     0.9385    0.8892    0.9132       704
+        love     0.7701    0.8090    0.7890       178
+       anger     0.9286    0.8982    0.9131       275
+        fear     0.8475    0.8915    0.8690       212
+    surprise     0.8750    0.7778    0.8235        81
+
+    accuracy                         0.8970      2000
+   macro avg     0.8762    0.8700    0.8722      2000
+weighted avg     0.8986    0.8970    0.8971      2000

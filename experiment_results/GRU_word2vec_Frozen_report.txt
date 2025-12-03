@@ -1,0 +1,19 @@
+Experiment Name: GRU_word2vec_Frozen
+Embedding Type: word2vec
+Embeddings Frozen: True
+--------------------------------------------------
+Final Validation Accuracy: 0.3485
+Final Validation Loss: 1.5936
+--------------------------------------------------
+              precision    recall  f1-score   support
+
+     sadness     0.1667    0.0036    0.0071       550
+         joy     0.3506    0.9830    0.5168       704
+        love     0.0000    0.0000    0.0000       178
+       anger     0.3333    0.0109    0.0211       275
+        fear     0.0000    0.0000    0.0000       212
+    surprise     0.0000    0.0000    0.0000        81
+
+    accuracy                         0.3485      2000
+   macro avg     0.1418    0.1662    0.0908      2000
+weighted avg     0.2151    0.3485    0.1868      2000

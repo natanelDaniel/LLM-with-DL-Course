@@ -56,3 +56,31 @@ Run the main script:
 ```bash
 python main.py
 ```
+
+## 4. Analysis and Results Interpretation
+
+The `main.py` script systematically runs all combinations of embedding type (our_embedding, glove, word2vec) and freezing status (Frozen, FineTuned). The results for each run are saved in the `experiment_results/` directory under a descriptive name (e.g., `GRU_glove_FineTuned`).
+
+### 4.1. Key Output Metrics
+
+The results help compare model convergence and performance:
+
+*   **Metrics Plots (`*_metrics.png`)**:
+    *   This plot shows Loss vs. Epoch and Accuracy vs. Epoch on two separate Y-axes.
+    *   **Goal**: Look for the run where validation loss decreases steadily and validation accuracy increases without showing significant divergence from training accuracy (which indicates overfitting).
+
+*   **Confusion Matrix Plots (`*_confusion_matrix.png`)**:
+    *   This heatmap visualizes the normalized classification results.
+    *   The diagonal cells (from top-left to bottom-right) show the Recall for each emotion (e.g., how often 'joy' was correctly predicted as 'joy').
+    *   Off-diagonal cells show misclassifications (e.g., 'fear' being mistakenly classified as 'sadness').
+
+*   **Report Files (`*_report.txt`)**:
+    *   Contains the full classification report, providing Precision, Recall, and F1-Score for all six emotion classes.
+    *   **Precision**: Out of all predictions for a class (e.g., 'anger'), how many were correct?
+    *   **Recall**: Out of all actual samples of a class (e.g., 'anger'), how many did the model find?
+    *   **F1-Score**: The harmonic mean of Precision and Recall, providing a single metric to balance both.
+    *   **Macro Avg / Weighted Avg**: Used to summarize performance across all classes. Weighted average is typically more relevant if class support (sample count) is unequal.
+
+### 4.2. Best Configuration Summary
+
+The console output and the reports will highlight the model configuration that achieved the highest overall Final Validation Accuracy. This is the optimal configuration for your GRU model on this dataset.

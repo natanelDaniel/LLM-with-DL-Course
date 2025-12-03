@@ -5,7 +5,7 @@ import re
 from torch.utils.data import Dataset, DataLoader
 from collections import Counter
 from sklearn.model_selection import train_test_split
-from config import Hyperparameters
+from config import Hyperparameters, GLOVE_PATH, WORD2VEC_PATH
 
 def preprocess_text(text):
     """Simple text cleaning function."""
@@ -88,7 +88,7 @@ def load_external_embeddings(vocab, embedding_dim, embedding_type):
     if embedding_type == "our_embedding":
         return None
         
-    path = Hyperparameters.GLOVE_PATH if embedding_type == "glove" else Hyperparameters.WORD2VEC_PATH
+    path = GLOVE_PATH if embedding_type == "glove" else WORD2VEC_PATH
     
     print(f"\n[Info] Loading {embedding_type} embeddings from: {path}")
 
